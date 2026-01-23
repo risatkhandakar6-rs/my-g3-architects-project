@@ -42,7 +42,13 @@ main{
   margin-right: 30px;
   
 }
-.navbar, .banner, .teams, .facts, .our-sponsors{
+.nav-item :hover{
+  color: blue;
+}
+.btn-primary :hover{
+ background-color: blue;
+}
+.navbar, .banner, .teams, .facts, .our-sponsors, .footer{
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -61,21 +67,23 @@ main{
 }
 .btn-primary{
   background-color: #FF900E;
-  color: white;
+  color:white;
   padding: 20px 25px;
   font-size: 1.25rem;
   font-weight: 600;
   border: none;
   border-radius: 8px;
   margin-bottom: 50px;
+
 }
+
 .banner-img{
   width: 100%;
 
   
 }
 @media screen and (max-width:576px){
-  .navbar, .navlinks, .teams, .facts, .our-sponsors {
+  .navbar, .navlinks, .teams, .facts, .our-sponsors, .features {
     flex-direction: column;
   }
   .team-img-container{
@@ -95,6 +103,15 @@ main{
     grid-template-columns: 1fr !important;
     justify-items: center;
   }
+  .featured-architect img{
+    width: 100%;
+    margin-left: -125px;
+    margin-bottom: 150px;
+  }
+  #experience-badge{
+   margin-right: 30px;
+  }
+  
 
 
 
@@ -139,6 +156,51 @@ main{
 .btn-primary{
   margin-top: 50px;
 }
+#features-section{
+  border-left: 5px solid #FF900E;
+}
+.features{
+  max-width: 1480px;
+  margin: 0 auto;
+}
+.features-cards-title{
+  font-size: 2.8rem;
+  font-weight: 700;
+  padding-left: 20px;
+  margin-bottom: 24px;
+  margin-top: 169px;
+}
+.features-script{
+  margin-bottom: 30px;
+}
+.features-card{
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.featured-architect{
+  margin-left: 130px;
+  margin-top: 130px;
+}
+
+#experience-badge{
+  padding: 45px 42px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: -120px;
+  margin-left: -100px;
+}
+#experience-year{
+  font-size: 4rem;
+  font-weight: 700;
+}
+.featured-architect img{
+  width: 150%;
+}
+
+
+
 .facts{
   align-items: center;
 }
@@ -188,4 +250,13 @@ main{
   width: 165;
   height: 50;
   filter: grayscale(100%);
+}
+.footer{
+  background-color: #FFF4E7;
+  
+  text-align: center;
+  padding-top: 39px;
+  padding-bottom: 39px;
+  margin-top: 100px;
+
 }
