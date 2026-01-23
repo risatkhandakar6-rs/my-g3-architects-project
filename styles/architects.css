@@ -42,7 +42,7 @@ main{
   margin-right: 30px;
   
 }
-.navbar, .banner, .teams{
+.navbar, .banner, .teams, .facts, .our-sponsors{
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -74,28 +74,32 @@ main{
 
   
 }
-@media screen and (max-width: 576px){
-  .navbar, .navlinks, .teams{
+@media screen and (max-width:576px){
+  .navbar, .navlinks, .teams, .facts, .our-sponsors {
     flex-direction: column;
-    
   }
-
-
   .team-img-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .team-img-container img{
-    width: 100%;
-    height: auto;
+    grid-template-columns: 1fr !important;
   }
   .teams-content{
     margin-right: 100px;
+  }
+  .sponsors-list{
+    grid-template-columns: 1fr !important;
+    margin-bottom: 10px;
+
+    justify-items: center;
     
   }
+  .facts-cards-container{
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+  }
+
+
 
 }
+
 @media screen and (min-width: 576px) and (max-width: 992px){
   .teams{
     flex-direction: column;
@@ -104,29 +108,27 @@ main{
     margin: 20px auto;
   }
 }
-
 .teams{
   align-items: center;
 }
 .team-img-container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 20px;
+
 }
 .teams-content{
   margin-left: 130px;
-  max-width: 530px;
 }
 .feature-title{
   font-size: 2.8rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 #quick-list{
-  color: #727272;
   font-weight: 500;
+  color: #424242;
 }
 #of-our{
-  color: #131313;
   font-weight: 700;
   
 }
@@ -134,12 +136,56 @@ main{
   color: #FF900E;
   font-weight: 700;
 }
-.teams-script{
+.btn-primary{
+  margin-top: 50px;
+}
+.facts{
+  align-items: center;
+}
+.facts-content{
+  text-align: center;
+  margin: 0 auto;
+}
+.facts-title{
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.facts-cards-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 124px;
+}
+.facts-card{
+  border: 1px solid #FF900E;
+  border-radius: 5px;
+  height: 241px;
+  width: 241px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.sponsors-info{
+  text-align: center;
+}
+.sponsors-list{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 155px;
+}
+.sponsors-info h3{
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.sponsors-info p{
   font-size: 1rem;
   font-weight: 400;
-  line-height: 26px;
   color: #727272;
-  margin-bottom: 32px;
+  margin-bottom: 50px;
 }
-
-
+.sponsors-list img{
+  width: 165;
+  height: 50;
+  filter: grayscale(100%);
+}
